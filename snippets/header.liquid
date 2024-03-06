@@ -1,11 +1,13 @@
 <h1>
-
     <!-- shopify API has multiple objects and properties you can access -->
     {{ shop.name }}
+</h1>
 
+<nav>
     <!-- Main menu -->
     {% for link in linklists.main-menu.links -%}
     {{ link.title | link_to: link.url }}
     {%- endfor %}
+</nav>
+    
 
-</h1>
