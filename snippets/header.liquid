@@ -3,10 +3,10 @@
     {{ shop.name }}
 </h1>
 
-<nav>
+<nav {{ 'header.ccs' | assets_url }}>
     <!-- Main menu -->
     {% for link in linklists.main-menu.links -%}
-    {{ link.title | link_to: link.url }}
+        {{ link.title | link_to: link.url }}
     {%- endfor %}
 </nav>
     
