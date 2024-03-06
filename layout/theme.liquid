@@ -1,22 +1,12 @@
 <html>
-
     <head>
         {{content_for_header}}
-
         {{ 'style.css' | asset_url | stylesheet_tag }} <!-- 'stylesheet_tag makes it a stylesheet link for the head - global CSS stuff goes here' -->
-    
     </head>
-
     <body>
-
         {{content_for_layout}}
-
         {% render 'header' %}
-
         <h1>Raccoons - should also be blue</h1>
-
         {% render 'footer' %}
-
     </body>
-    
 </html>

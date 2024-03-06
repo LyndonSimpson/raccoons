@@ -1,0 +1,56 @@
+/* Container for the header */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation menu styling */
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu li {
+        margin-bottom: 10px;
+    }
+}

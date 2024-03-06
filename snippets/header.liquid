@@ -1,13 +1,21 @@
-<h1>
-    <!-- shopify API has multiple objects and properties you can access -->
-    {{ shop.name }}
-</h1>
-
-<nav {{ 'header.ccs' | assets_url }}>
-    <!-- Main menu -->
-    {% for link in linklists.main-menu.links -%}
-        {{ link.title | link_to: link.url }}
-    {%- endfor %}
-</nav>
+<header style="background-color: #f8f9fa; padding: 20px;">
+    <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ shop.url }}">
+                <img src="{{ shop.brand.logo | img_url: '100x' }}" alt="{{ shop.name }}" style="max-width: 100%; height: auto;">
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <ul style="list-style-type: none; padding: 0;">
+                {% for link in linklists.main-menu.links %}
+                    <li style="display: inline-block; margin-right: 20px;">
+                        <a href="{{ link.url }}" style="color: #333; text-decoration: none;">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
     
 
