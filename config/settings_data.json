@@ -1,0 +1,15 @@
+{
+  "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "text": "GALLET"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
