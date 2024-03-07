@@ -1,21 +1,30 @@
 <header>
+
     <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
-    <div class="container">
-        <div class="logo">
-            <a href="{{ shop.url }}">
-                <!-- <img src="{{ shop.brand.logo | img_url: '100x' }}" alt="{{ shop.name }}" style="max-width: 100%; height: auto;"> -->
-            </a>
+    <div class="header-container">
+
+        <!--hamburger menu-->
+        <div class="left-menu">
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
-        <nav class="nav-menu">
-            <ul>
-                {% for link in linklists.main-menu.links %}
-                    <li>
-                        <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
+
+        <!--shop name -->
+        <div class="shop-name">
+            {{ shop.name }}
+        </div>
+
+        <!--translations menu-->
+        <div class="right-menu">
+            <button>
+                <i class="fa fa-globe"></i>
+            </button>
+        </div>
     </div>
+
 </header>
     
 
