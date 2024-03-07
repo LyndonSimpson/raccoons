@@ -30,8 +30,15 @@
 {% schema %}
     {
         "name": "header",
-        "settings": [],
-        "presets": [{ "name": "header section"}]
+        "settings": [{
+            "type": "text",
+            "id": "text",
+            "label": "Header"
+        }],
+        "presets": [{ "name": "header section"}],
+        "tag": "header",
+        "class": "header-section",
+        "limit": 1
     }
 {% endschema %}
 
