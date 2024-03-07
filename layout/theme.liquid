@@ -7,8 +7,7 @@
     </head>
 
     <body>
-        <!--built-in data for layout - SEO and stuff.. -->
-        {{content_for_layout}}
+        
 
         <!--header-->
         {% render 'header' %}
@@ -16,6 +15,8 @@
 
         <!--main content of the page - have it be dynamic -->
 
+        <!--built-in data for layout - SEO and stuff.. -->
+        {{content_for_layout}} <!-- looks like this places stuff in templates here when declaring the {% layout 'theme' %} balise at the top of a template! -->  
 
         <!--footer-->
         {% render 'footer' %}
