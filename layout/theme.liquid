@@ -3,6 +3,7 @@
     <head>
         <!--built-in data for header - SEO and stuff - metadata - stuff usually in the header-->
         {{content_for_header}}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {{ 'style.css' | asset_url | stylesheet_tag }} <!-- 'stylesheet_tag makes it a stylesheet link for the head - global CSS stuff goes here' -->
     </head>
 

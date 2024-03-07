@@ -1,11 +1,11 @@
-/* Container for the header */
+/* header container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header styling */
+/* header */
 header {
     background-color: #24292e; /* Dark brown background color inspired by GitHub */
     padding: 20px;
@@ -13,13 +13,13 @@ header {
     color: #ffffff; /* White text color */
 }
 
-/* Logo styling */
+/* logo (commented out in the html) */
 .logo img {
     max-width: 100%;
     height: auto;
 }
 
-/* Navigation menu styling */
+/* nav menu */
 .nav-menu ul {
     list-style-type: none;
     padding: 0;
@@ -34,7 +34,13 @@ header {
     margin-right: 20px;
     padding: 0.5rem;
     background-color: black;
-    border-radius: 5px
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-menu li:hover {
+    transform: scale(1.05); /* Slightly increase the size of the element */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to create a "pop out" effect */
 }
 
 .nav-menu a {
@@ -47,11 +53,11 @@ header {
     color: #0366d6; /* GitHub blue color for hover effect */
 }
 
-/* Responsive styles */
+/* responsive */
 @media (max-width: 768px) {
     .nav-menu ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .nav-menu li {
