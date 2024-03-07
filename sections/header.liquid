@@ -1,0 +1,39 @@
+<header>
+
+    <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
+    <div class="header-container">
+
+        <!--hamburger menu-->
+        <div class="left-menu">
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!--shop name -->
+        <div class="shop-name">
+            {{ shop.name }}
+        </div>
+
+        <!--translations menu-->
+        <div class="right-menu">
+            <button>
+                <i class="fa fa-globe"></i>
+            </button>
+        </div>
+    </div>
+
+</header>
+
+{% schema %}
+    {
+        "name": "header",
+        "settings": [],
+        "presets": [{ "name": "header section"}]
+    }
+{% endschema %}
+
+    
+
