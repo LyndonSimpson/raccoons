@@ -1,46 +1,55 @@
-<header>
-
-    <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
-    <div class="header-container">
-
-        <!--hamburger menu-->
-        <div class="left-menu">
-            <div class="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-
-        <!--shop name -->
-        <div class="shop-name">
-            {{ section.settings.text }}
-        </div>
-
-        <!--translations menu-->
-        <div class="right-menu">
-            <button>
-                <i class="fa fa-globe"></i>
-            </button>
-        </div>
-    </div>
-
-</header>
-
 {% schema %}
     {
-        "name": "header",
-        "settings": [{
-            "type": "text",
-            "id": "text", 
-            "label": "Header"
-        }],
-        "presets": [{ "name": "header section"}],
-        "tag": "header",
-        "class": "header-section",
-        "limit": 1
+     "name": "header",
+     "settings": [],
+     "blocks": [
+        {
+          "type": "header",
+          "name": "Header",
+          "settings": [
+            {
+              "type": "text",
+              "id": "shop_name",
+              "label": "Shop Name",
+              "default": "Your Shop Name"
+            },
+            {
+              "type": "image_picker",
+              "id": "logo",
+              "label": "Logo"
+            }
+          ]
+        }
+     ],
+     "presets": [
+        {
+          "name": "Default Header",
+          "category": "Header"
+        }
+     ]
     }
 {% endschema %}
+    
+<header>
+    <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
+    <div class="header-container">
+    <div class="left-menu">
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="shop-name">
+          {{ section.settings.shop_name }}
+        </div>
+        <div class="right-menu">
+          <button>
+            <i class="fa fa-globe"></i>
+          </button>
+        </div>
+     </div>
+</header>
 
     
 
