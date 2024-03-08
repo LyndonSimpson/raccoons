@@ -7,8 +7,8 @@
           "header_XX9WPX": {
             "type": "header",
             "settings": {
-              "shop_name": "RACCOONS",
-              "background_image": "shopify:\/\/shop_images\/trash-panda.png"
+              "backgrounbd_image_name": "Background image",
+              "background_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
             }
           }
         },
