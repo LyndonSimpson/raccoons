@@ -15,6 +15,10 @@
     color: white;
 }
 
+.shop-name-change {
+    opacity: 0;
+}
+
 /* Menu buttons */
 .left-menu button,
 .right-menu button {
@@ -26,8 +30,8 @@
 
 /* Hamburger Menu */
 .hamburger-menu {
-    display: inline-block;
     cursor: pointer;
+    display: inline-block; 
 }
 
 .hamburger-menu div {
@@ -38,10 +42,49 @@
     transition: 0.4s;
 }
 
+/* Hamburger menu styles */
+.hamburger-menu {
+    cursor: pointer;
+    /* Other styles */
+}
+
+.hamburger-menu div {
+    width: 35px;
+    height: 3px;
+    background-color: black; /* Or any color you prefer */
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Transition effect for the hamburger menu */
+.hamburger-menu div:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.hamburger-menu div:nth-child(2) {
+    transform: rotate(0deg);
+}
+
+/* Transition effect for the hamburger menu when it changes */
+.hamburger-menu.change div:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger-menu.change div:nth-child(2) {
+    transform: rotate(-45deg);
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    display: none;
+    /* Other styles */
+}
+
 /* Change the appearance of the hamburger menu on hover */
 .hamburger-menu:hover div {
     width: 40px;
 }
+
 
 /* Earth icon button */
 .right-menu button {
@@ -50,6 +93,11 @@
     flex-direction: row;
     padding: 0.01rem; /* Add some space for the icon */
     border-radius: 25px;
+    transition: color 0.3s ease;
+}
+
+.right-menu button:hover {
+    color: #007bff;
 }
 
 .translations {

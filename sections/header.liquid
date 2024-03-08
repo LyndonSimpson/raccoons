@@ -6,7 +6,7 @@
           "type": "text",
           "id": "shop_name",
           "label": "Shop Name",
-          "default": "gallet"
+          "default": "raccoons"
         }
       ],
       "tag": "header",
@@ -48,24 +48,32 @@
     <div class="header-container">
 
     <div class="left-menu">
-        <div class="hamburger-menu">
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <ul>
+          <li>montre 1</li>
+          <li>montre 2</li>
+          <li>montre 3</li>
+        </ul>
+    </div>
+    </div>
 
-        <div class="shop-name">
+      <div class="shop-name" id="shop-name">
           {{ section.settings.shop_name }}
-        </div>
+      </div>
 
-        <div class="right-menu">
+      <div class="right-menu">
           <button>
             <p class="translations">
               français
             </p>
             <i class="fa fa-globe"></i>
-          </button>
-        </div>
+          </button> 
+      </div>
 
      </div>
+     <script src="{{ 'header-script.js' | asset_url }}"></script>
 </header>

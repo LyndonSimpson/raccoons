@@ -1,0 +1,12 @@
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    var dropdownMenu = document.getElementById('dropdown-menu');
+    var hamburgerMenu = this;
+
+    if (dropdownMenu.style.display === 'none') {
+        dropdownMenu.style.display = 'block';
+        hamburgerMenu.classList.add('change');
+    } else {
+        dropdownMenu.style.display = 'none';
+        hamburgerMenu.classList.remove('change');
+    }
+});
