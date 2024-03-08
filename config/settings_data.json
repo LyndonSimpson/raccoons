@@ -4,7 +4,25 @@
       "header": {
         "type": "header",
         "settings": {
-          "text": "GALLET"
+          "shop_name": "RACCOONS"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "social_Rnn4gt": {
+            "type": "social",
+            "settings": {
+              "text": "TEST-LINK",
+              "url": ""
+            }
+          }
+        },
+        "block_order": [
+          "social_Rnn4gt"
+        ],
+        "settings": {
+          "footer_text": "© 2024 RACCOONS. All rights reserved."
         }
       }
     },
