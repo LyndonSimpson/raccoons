@@ -1,3 +1,37 @@
+{% schema %}
+    {
+     "name": "footer",
+     "settings": [
+        {
+          "type": "text",
+          "id": "footer_text",
+          "label": "Footer Text",
+          "default": "© 2024 GALLET. All rights reserved."
+        }
+     ],
+     "blocks": [
+        {
+          "type": "footer",
+          "name": "Footer",
+          "settings": [
+            {
+              "type": "text",
+              "id": "footer_text",
+              "label": "Footer Text",
+              "default": "© 2024 GALLET. All rights reserved."
+            }
+          ]
+        }
+     ],
+     "presets": [
+        {
+          "name": "Default Footer",
+          "category": "Footer"
+        }
+     ]
+    }
+    {% endschema %}
+
 <footer>
     <link rel="stylesheet" href="{{ 'footer.css' | asset_url }}">
     <div class="container">
