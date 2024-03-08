@@ -51,30 +51,24 @@
 <footer>
     <link rel="stylesheet" href="{{ 'footer.css' | asset_url }}">
     <div class="container">
-        <div class="footer-nav">
-            <ul>
-                {% for link in linklists.footer-menu.links %}
-                    <li>
-                        <a href="{{ link.url }}">{{ link.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
+        
         <div class="footer-info">
+
             <p>{{ section.settings.footer_text }}</p>
             <p>
                 {{ shop.brand.slogan }}
             </p>
+
             <ul class="social-links">
-                <li><a href="{{ shop.social.facebook }}">Facebook</a></li>
-                <li><a href="{{ shop.social.twitter }}">Twitter</a></li>
-                <li><a href="{{ shop.social.instagram }}">Instagram</a></li>
-
                 {% for block in section.blocks %}
-                    <a href="{{ block.settings.url }}"> {{ block.settings.text }} </a>
+                    {% if block.type == 'social' %}
+                        <li>
+                            <a href="{{ block.settings.url }}">{{ block.settings.text }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
-
             </ul>
+
         </div>
     </div>
 </footer>
