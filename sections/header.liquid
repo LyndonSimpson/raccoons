@@ -1,7 +1,12 @@
 {% schema %}
     {
      "name": "header",
-     "settings": [],
+     "settings": [{
+              "type": "text",
+              "id": "shop_name",
+              "label": "Shop Name",
+              "default": "GALLET"
+            }],
      "blocks": [
         {
           "type": "header",
@@ -33,6 +38,7 @@
 <header>
     <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
     <div class="header-container">
+
     <div class="left-menu">
         <div class="hamburger-menu">
             <div></div>
@@ -40,14 +46,17 @@
             <div></div>
           </div>
         </div>
+
         <div class="shop-name">
           {{ section.settings.shop_name }}
         </div>
+
         <div class="right-menu">
           <button>
             <i class="fa fa-globe"></i>
           </button>
         </div>
+
      </div>
 </header>
 
