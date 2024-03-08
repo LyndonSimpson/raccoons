@@ -30,7 +30,7 @@
         }
      ]
     }
-    {% endschema %}
+{% endschema %}
 
 <footer>
     <link rel="stylesheet" href="{{ 'footer.css' | asset_url }}">
@@ -45,7 +45,7 @@
             </ul>
         </div>
         <div class="footer-info">
-            <p>&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</p>
+            <p>{{ settings.id.footer_text }}</p>
             <p>
                 {{ shop.brand.slogan }}
             </p>
