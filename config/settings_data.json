@@ -4,16 +4,16 @@
       "header": {
         "type": "header",
         "blocks": {
-          "header_XX9WPX": {
+          "header_rRUME7": {
             "type": "header",
             "settings": {
-              "backgrounbd_image_name": "Background image",
+              "backgrounbd_image_name": "Green background image",
               "background_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
             }
           }
         },
         "block_order": [
-          "header_XX9WPX"
+          "header_rRUME7"
         ],
         "settings": {
           "shop_name": "RACCOONS"
