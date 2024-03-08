@@ -21,6 +21,22 @@
               "default": "© 2024 RACCOONS. All rights reserved."
             }
           ]
+        },
+        {
+            "name": "Social links",
+            "type": "social",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "text"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                }
+            ]
         }
      ],
      "presets": [
@@ -53,6 +69,11 @@
                 <li><a href="{{ shop.social.facebook }}">Facebook</a></li>
                 <li><a href="{{ shop.social.twitter }}">Twitter</a></li>
                 <li><a href="{{ shop.social.instagram }}">Instagram</a></li>
+
+                {% for block in section.blocks %}
+                    <a href="{{ block.settings.url }}"></a>
+                {% endfor %}
+
             </ul>
         </div>
     </div>
