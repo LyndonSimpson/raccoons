@@ -17,14 +17,14 @@
           "settings": [
             {
               "type": "text",
-              "id": "shop_name",
+              "id": "shop-name",
               "label": "Shop Name",
               "default": "Your Shop Name"
             },
             {
-              "type": "image_picker",
-              "id": "logo",
-              "label": "Logo"
+              "type": "header",
+              "id": "header-section",
+              "label": "Header"
             }
           ]
         }
@@ -38,7 +38,7 @@
     }
 {% endschema %}
     
-<header>
+<header class="header-section">
     <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
     <div class="header-container">
 
