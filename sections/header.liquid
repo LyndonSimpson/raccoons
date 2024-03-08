@@ -1,16 +1,18 @@
 {% schema %}
     {
-     "name": "header",
-     "settings": [{
-              "type": "text",
-              "id": "shop_name",
-              "label": "Shop Name",
-              "default": "RACCOONS"
-            }],
-     "tag": "header",
-     "class": "header-section",
-     "limit": 1,
-     "blocks": [
+      "name": "header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "shop_name",
+          "label": "Shop Name",
+          "default": "gallet"
+        }
+      ],
+      "tag": "header",
+      "class": "header-section",
+      "limit": 1,
+      "blocks": [
         {
           "type": "image",
           "name": "header_image",
@@ -21,7 +23,7 @@
               "id": "backgrounbd_image_name",
               "label": "Background image",
               "default": "Background image"
-            },
+            }, 
             {
               "type": "image_picker",
               "id": "background_image",
@@ -29,23 +31,24 @@
             }
           ]
         }
-     ],
-     "presets": [
+      ],
+      "presets": [
         {
           "name": "Default Header",
           "category": "Header"
         }
-     ]
+      ]
     }
 {% endschema %}
     
 <header>
     <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
-    <div class="header-container" style="background-image: url('{{ block.settings.background_image | img_url: '1024x' }}');">
-      
+    <!-- image was not uploading, but this is how you use blocks for lient image upload in backoffice : <div class="header-container" style="background-image: url('{{ block.settings.background_image | img_url: '1024x' }}');">  -->
+    
+    <div class="header-container">
+
     <div class="left-menu">
         <div class="hamburger-menu">
-            <div></div>
             <div></div>
             <div></div>
           </div>
@@ -57,6 +60,9 @@
 
         <div class="right-menu">
           <button>
+            <p class="translations">
+              français
+            </p>
             <i class="fa fa-globe"></i>
           </button>
         </div>

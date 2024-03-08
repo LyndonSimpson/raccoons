@@ -3,26 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    height: 100%; /* Adjust as needed */ 
+    padding: 2rem;
+    background-color: grey;
 }
 
 /* Shop name */
 .shop-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: black; /* Black text color */
+    font-size: 20px;
+    color: white;
 }
 
 /* Menu buttons */
 .left-menu button,
 .right-menu button {
-    background-color: transparent;
+    background-color: white;
     border: none;
-    color: black; /* Black text color */
+    color: black;
     cursor: pointer;
 }
 
@@ -34,8 +30,8 @@
 
 .hamburger-menu div {
     width: 35px;
-    height: 5px;
-    background-color: black; /* Change the color as needed */
+    height: 3px;
+    background-color: white; /* Change the color as needed */
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -47,11 +43,37 @@
 
 /* Earth icon button */
 .right-menu button {
-    padding-left: 10px; /* Add some space for the icon */
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 0.01rem; /* Add some space for the icon */
+    border-radius: 25px;
+}
+
+.translations {
+    font-size: 15px;
+    padding-left: 10px;
 }
 
 /* Add your icon styles here */
 .fa-globe {
     /* Example: FontAwesome icon */
-    font-size: 20px;
+    font-size: 15px;
+    padding: 17px;
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+    .shop-name,
+    .hamburger-menu div {
+        color: black;
+    }
+
+    .translations {
+        display: none; /* Hide the text for translations */
+    }
+
+    .fa-globe {
+        display: inline-block; /* Show the globe icon */
+    }
 }
