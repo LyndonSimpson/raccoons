@@ -3,6 +3,18 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "header_XX9WPX": {
+            "type": "header",
+            "settings": {
+              "shop_name": "RACCOONS",
+              "background_image": "shopify:\/\/shop_images\/trash-panda.png"
+            }
+          }
+        },
+        "block_order": [
+          "header_XX9WPX"
+        ],
         "settings": {
           "shop_name": "RACCOONS"
         }
