@@ -1,18 +1,3 @@
-{%  schema  %} 
-  {
-    "name": "index",
-    "settings": [
-      {}
-    ],
-    "tag": "section",
-    "class": "index-section",
-    "limit": 1,
-    "blocks": [
-      {}
-    ]
-  }
-{% endschema %}
-
 <link rel="stylesheet" href="{{ 'index.css' | asset_url }}">
 
 <div class="main-container">
@@ -27,5 +12,7 @@
   {% section 'explore' %}
 
   {% section 'carousel' %}
+
+  {% section 'contact' %}
 
 </div>
