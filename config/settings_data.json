@@ -3,36 +3,30 @@
     "sections": {
       "header": {
         "type": "header",
+        "settings": {
+          "shop_name": "raccoons"
+        }
+      },
+      "about": {
+        "type": "about",
         "blocks": {
-          "header_rRUME7": {
-            "type": "header",
+          "image_kqkkNi": {
+            "type": "image",
             "settings": {
-              "backgrounbd_image_name": "Green background image",
-              "background_image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
+              "about_image_name": "About image name",
+              "about_image": "shopify:\/\/shop_images\/theme_cover_image.jpg"
             }
           }
         },
         "block_order": [
-          "header_rRUME7"
+          "image_kqkkNi"
         ],
         "settings": {
-          "shop_name": "RACCOONS"
+          "about_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         }
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "social_Rnn4gt": {
-            "type": "social",
-            "settings": {
-              "text": "TEST-LINK",
-              "url": "https:\/\/www.facebook.com\/raccoonmemes"
-            }
-          }
-        },
-        "block_order": [
-          "social_Rnn4gt"
-        ],
         "settings": {
           "footer_text": "© 2024 RACCOONS. All rights reserved."
         }
