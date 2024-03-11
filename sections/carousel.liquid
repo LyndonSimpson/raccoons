@@ -13,14 +13,15 @@
 <link rel="stylesheet" href="{{ 'carousel.css' | asset_url }}">
 
 <div class="collection-container">
-    <h1 class="h1">Experience Gallet</h1>
     <div class="collection-carrousel">
-      {% for product in collection limit:3 %}
-        <img class="product-image-carousel" src="{{ product.featured_image }}" alt="{{ product.featured_image.alt }}">
-        <button class="show-product-button" href="{{ product.url }}" >+</button>
-        <title class="product-title-carousel">{{ product.title }}</title>
-        <div class="product-price-carousel">{{ product.price | money }}</div>
-        <p>{{ product.description }}</p>
-      {% endfor %}
+        {% for product in collection limit:3 %}
+            <div class="product-item">
+                <img class="product-image-carousel" src="{{ product.featured_image }}" alt="{{ product.featured_image.alt }}">
+                <button class="show-product-button">+</button>
+                <h2 class="product-title-carousel">{{ product.title }}</h2>
+                <div class="product-price-carousel">{{ product.price | money }}</div>
+                <p>{{ product.description }}</p>
+            </div>
+        {% endfor %}
     </div>
 </div>

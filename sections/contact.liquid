@@ -1,0 +1,35 @@
+{% schema %}
+    {
+      "name": "contact",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "bg-image",
+          "label": "Background image",
+          "default": "Background image"
+        }
+      ],
+      "tag": "div",
+      "class": "contact-section",
+      "limit": 1,
+      "blocks": [
+        {}
+      ],
+      "presets": [
+        {
+          "name": "Default contact section",
+          "category": "Contact"
+        }
+      ]
+    }
+{% endschema %}
+
+<link rel="stylesheet" href="{{ contact.css |  stylesheet_tag }}">
+
+<div class="contact-main-container">
+    <div class="contact-section">
+        <h1>Informations contact</h1>
+        <button href="#contact-form-page" >Nous contacter</button>
+    </div>
+    <img src="{{ section.settings.bg-image }}" alt="{{ section.settings.label }}">
+</div>
