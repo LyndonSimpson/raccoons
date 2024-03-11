@@ -1,0 +1,33 @@
+{% schema %}
+    {
+      "name": "explore",
+      "settings": [
+        {
+          "type": "text",
+          "id": "explore_title",
+          "label": "Explore title",
+          "default": "Explore"
+        }
+      ],
+      "tag": "section",
+      "class": "explore-section",
+      "limit": 1,
+      "blocks": [
+        {}
+      ],
+      "presets": [
+        {
+          "name": "Explore section",
+          "category": "Explore"
+        }
+      ]
+    }
+{% endschema %}
+
+<link rel="stylesheet" href="{{ 'explore.css' | asset_url }}">
+
+<div class="explore-container">
+    <img src="{{ raccoons-bg.jpg | assets_url }}" alt="explore-bg-image">
+    <h1>Explore new and pre-owned watches from our collection.</h1>
+    <button href="{{  }}">Browse</button>
+</div>

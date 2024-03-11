@@ -1,0 +1,63 @@
+{% schema %}
+    {
+      "name": "about-inversed",
+      "settings": [
+        {
+          "type": "text",
+          "id": "about_inversed_title",
+          "label": "About inversed title",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }
+      ],
+      "tag": "section",
+      "class": "about-inversed-section",
+      "limit": 1,
+      "blocks": [
+        {
+          "type": "image",
+          "name": "about_inversed_image",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "about_inversed_image_name",
+              "label": "About inversed image name",
+              "default": "About inversed image name"
+            }, 
+            {
+              "type": "image_picker",
+              "id": "about_inversed_image",
+              "label": "About inversed image"
+            }
+          ]
+        },
+        {
+          "type": "textarea",
+          "name": "about_inversed_description",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "textarea",
+              "id": "about_inversed_description",
+              "label": "About Inversed description paragraph",
+              "default": "About Inversed description paragraph"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Default about inversed section",
+          "category": "About"
+        }
+      ]
+    }
+{% endschema %}
+
+<link rel="stylesheet" href="{{ 'about-inversed.css' | asset_url }}">
+
+<div class="about-inversed-container">
+    <h2 class="h2">A Star of Sport and Industry</h2>
+    <p>Gallet watches have long been associated with sports and industry. Horseracing enthusiasts and participants sought Gallet for its precision. In Formula 1, the Gallet MultiChron Model 12 was notably worn by Jim Clark, especially during his triumphant 1965 Indianapolis 500 win. This model's presence in racing is complemented by the Gallet Dual-Timer's role as a timekeeper in the early days of the Indy 500 races. In yachting, Gallet's innovation is exemplified by the 1915 Yachting Timer, the first watch designed for yacht racing. Additionally, Senator Harry S. Truman, later U.S. President, endorsed the Gallet Flight Officer for the US Air Force, further highlighting the brand's diverse appeal.</p>
+    <img src="{{ raccoons-bg.jpg | assets_url }}" alt="about-image-2">
+</div>
