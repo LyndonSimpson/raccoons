@@ -1,0 +1,33 @@
+/* basic CSS: not finished */
+
+/* about-inversed section */
+.about-inversed-container {
+    display: flex; /* Use Flexbox to align items side by side */
+    justify-content: space-between; /* Ensure space between the image and the text */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add some padding around the section */
+}
+
+/* image */
+.about-inversed-container img {
+    width: 60%; /* Image takes up 60% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without stretching the image */
+}
+
+/* text container */
+.about-inversed-container .about-text {
+    width: 40%; /* Text takes up the remaining 40% of the container width */
+    padding-right: 20px; /* Add some space between the text and the image */
+}
+
+/* title */
+.about-inversed-container .about-text h2 {
+    margin-top: 0; /* Remove default margin */
+    color: #333; /* Set a color for the title */
+}
+
+/* paragraph */
+.about-inversed-container .about-text p {
+    color: #666; /* Set a color for the paragraph text */
+}
