@@ -52,7 +52,35 @@
 
 <footer>
     <link rel="stylesheet" href="{{ 'footer.css' | asset_url }}">
-    <div class="container">
+    <div class="footer-container">
+
+
+    <div class="contact-info">
+      <h1 class="h1-contact-info">Informations contact</h1>
+      <p>Lorem ipsum address line here</p>
+      <p>546 000 consectetur</p>
+      <p>0684457823</p>
+    </div>
+
+    <div class="footer-nav-menu">
+      <ul>
+        {% for product in collection %}
+          <li href="{{ product.url }}"> {{ product.title }} </li>
+        {% endfor %}
+      </ul>
+      <a href="#privacy-page">Privacy policy</a>
+      <a href="#terms-page">terms of use</a>
+    </div>
+
+    <div class="right-side-content-footer">
+      <h1 class="h1-opening-soon">Ouverture prochainement d'une boutique Gallet</h1>
+      <p>Lorem ipsum address line here</p>
+      <p>546 000 consectetur</p>
+      <p>0684457823</p>
+    </div>
+</footer>
+
+<!-- Old footer for testing - delete when new one is coded (html)
 
         <div class="footer-info">
 
@@ -73,4 +101,5 @@
 
         </div>
     </div>
-</footer>
+
+    -->
