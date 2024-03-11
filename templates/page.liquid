@@ -1,0 +1,31 @@
+{%  schema  %} 
+    {
+      "name": "index",
+      "settings": [
+        {}
+      ],
+      "tag": "section",
+      "class": "index-section",
+      "limit": 1,
+      "blocks": [
+        {}
+      ]
+    }
+  {% endschema %}
+  
+  <link rel="stylesheet" href="{{ 'index.css' | asset_url }}">
+  
+  <div class="main-container">
+    <h1 class="h1">Lorem Ipsum, sic amer doloris (et d'autres trucs en latin) :</h1>
+  
+    <h4>sous titre en dessous du grand titre ici</h4>
+  
+    {% section 'about' %}
+  
+    {% section 'about2' %}
+  
+    {% section 'explore' %}
+  
+    {% section 'carousel' %}
+  
+  </div>
