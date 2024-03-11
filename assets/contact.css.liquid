@@ -1,0 +1,30 @@
+/* basic CSS: not finished */
+
+/* General styles for the contact section */
+.contact-section {
+    position: relative; /* Positioning context for the overlay elements */
+    background-image: url('{{ section.settings.bg-image | img_url: '1024x' }}'); /* Use the image as the background */
+    background-size: cover; /* Cover the entire section with the background image */
+    background-position: center; /* Center the background image */
+    height: 500px; /* Set a fixed height for the section */
+    display: flex; /* Use Flexbox to align items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding around the section */
+}
+
+/* Styles for the title */
+.contact-section h1 {
+    color: #fff; /* Set the title color to white */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+/* Styles for the button */
+.contact-section button {
+    background-color: #000; /* Set the button background color to black */
+    color: #fff; /* Set the button text color to white */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Add padding to the button */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
