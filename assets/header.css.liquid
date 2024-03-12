@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto, monospace:wght@400;700&display=swap');
+
 /* Header container */
 .header-container {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
     padding-bottom: 5rem;
     background-color: grey;
-    background-image: url('../assets/raccoons-bg.jpg');
+    /* background-image: url('../assets/raccoons-bg.jpg'); commented to make it administrable */
 }
 
 /* Shop name */
@@ -42,12 +45,6 @@
     transition: 0.4s;
 }
 
-/* Hamburger menu styles */
-.hamburger-menu {
-    cursor: pointer;
-    /* Other styles */
-}
-
 /* Transition effect for the hamburger menu */
 .hamburger-menu div:nth-child(1) {
     transform: rotate(0deg);
@@ -71,12 +68,6 @@
     display: none;
     /* Other styles */
 }
-
-/* Change the appearance of the hamburger menu on hover */
-.hamburger-menu:hover div {
-    width: 40px;
-}
-
 
 /* Earth icon button */
 .right-menu button {

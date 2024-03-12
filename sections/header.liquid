@@ -7,37 +7,16 @@
           "id": "shop_name",
           "label": "Shop Name",
           "default": "raccoons"
+        },
+        {
+          "type": "image_picker",
+          "id": "background-image",
+          "label": "Background image"
         }
       ],
       "tag": "header",
       "class": "header-section",
-      "limit": 1,
-      "blocks": [
-        {
-          "type": "image",
-          "name": "header_image",
-          "limit": 1,
-          "settings": [
-            {
-              "type": "text",
-              "id": "backgrounbd_image_name",
-              "label": "Background image",
-              "default": "Background image"
-            }, 
-            {
-              "type": "image_picker",
-              "id": "background_image",
-              "label": "Background image for header"
-            }
-          ]
-        }
-      ],
-      "presets": [
-        {
-          "name": "Default Header",
-          "category": "Header"
-        }
-      ]
+      "limit": 1
     }
 {% endschema %}
     
@@ -45,7 +24,7 @@
     <link rel="stylesheet" href="{{ 'header.css' | asset_url }}">
     <!-- image was not uploading, but this is how you use blocks for lient image upload in backoffice : <div class="header-container" style="background-image: url('{{ block.settings.background_image | img_url: '1024x' }}');">  -->
     
-    <div class="header-container">
+    <div class="header-container" style="background-image: url({{ section.settings.background-image |  image_url: width: '100%'}})">
 
     <div class="left-menu">
       <div class="hamburger-menu" id="hamburger-menu">

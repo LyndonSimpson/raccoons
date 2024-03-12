@@ -1,18 +1,25 @@
+<!-- Home Page -->
+
 <link rel="stylesheet" href="{{ 'index.css' | asset_url }}">
 
 <div class="main-container">
-  <h1 class="h1">Lorem Ipsum, sic amer doloris (et d'autres trucs en latin) :</h1>
+  
+  <!-- titre et sous-titre tout en ahut de la homepage -->
+  {% section 'home-title' %}
 
-  <h4>sous titre en dessous du grand titre ici</h4>
-
+  <!-- section about 1 -->
   {% section 'about' %}
 
+  <!-- section about 2 -->
   {% section 'about2' %}
 
+  <!-- section explore -->
   {% section 'explore' %}
 
+  <!-- section carousel -->
   {% section 'carousel' %}
 
+  <!-- section contact -->
   {% section 'contact' %}
 
 </div>

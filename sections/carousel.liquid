@@ -15,10 +15,10 @@
 
 <div class="collection-container">
     <div class="collection-carrousel">
-        {% for product in collection limit:3 %}
+        {% for product in collections['Hydrogen'].products %}
             <div class="product-item">
-                <img class="product-image-carousel" src="{{ product.featured_image }}" alt="{{ product.featured_image.alt }}">
-                <button class="show-product-button">+</button>
+                <img src="{{ product.featured_image | img_url: '150x150' }}" alt="{{ product.title }}">
+                <a href="{{ product.url }}" class="show-product-button">+</a>
                 <h2 class="product-title-carousel">{{ product.title }}</h2>
                 <div class="product-price-carousel">{{ product.price | money }}</div>
                 <p>{{ product.description }}</p>

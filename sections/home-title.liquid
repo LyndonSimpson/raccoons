@@ -1,0 +1,26 @@
+{% schema %}
+    {
+      "name": "about",
+      "settings": [
+        {
+          "type": "text",
+          "id": "home-title",
+          "label": "Home title",
+          "default": "Lorem ipsum truc machin titre homepage (administrable)"
+        },
+        {
+          "type": "text",
+          "id": "home-undertitle",
+          "label": "Home undertitle",
+          "default": "espace sous-titre en dessous (administrable)"
+        }
+      ],
+      "tag": "section",
+      "class": "about-section",
+      "limit": 1
+    }
+{% endschema %}
+
+<h1 class="h1"> {{ section.settings.home-title }} </h1>
+
+<h4> {{ section.settings.home-undertitle }} </h4>

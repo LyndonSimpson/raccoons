@@ -3,10 +3,12 @@
 /* General styles for the explore section */
 .explore-section {
     position: relative; /* Positioning context for the overlay elements */
-    background-image: url('{{ "explore-bg.jpg" | asset_url }}'); /* Use the image as the background */
+    background-image: url('../assets/watch1.jpg'); /* Use the image as the background */
     background-size: cover; /* Cover the entire section with the background image */
     background-position: center; /* Center the background image */
-    height: 500px; /* Set a fixed height for the section */
+    width: 100%;
+    height: 250px; /* Set a fixed height for the section */
+    margin: 3rem;
     display: flex; /* Use Flexbox to align items */
     align-items: center; /* Center items vertically */
     justify-content: flex-start; /* Align items to the left */
@@ -28,7 +30,7 @@
 
 /* Styles for the title */
 .explore-section .overlay-container h1 {
-    color: black; /* Set the title color to white */
+    color: white; /* Set the title color to white */
     margin-bottom: 20px; /* Add some space below the title */
 }
 

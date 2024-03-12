@@ -1,24 +1,27 @@
 /* basic CSS: not finished */
 
 /* about-inversed section */
-.about-inversed-container {
+.about2-container {
     display: flex; /* Use Flexbox to align items side by side */
     justify-content: space-between; /* Ensure space between the image and the text */
     align-items: center; /* Center items vertically */
-    padding: 20px; /* Add some padding around the section */
+    margin: 3rem;
+    margin-left: 8rem;
+    /* background-image: url('../assets/watch4.jpg'); commented because image is administrable */
 }
 
-/* image */
-.about-inversed-container img {
-    width: 60%; /* Image takes up 60% of the container width */
+/* pushes the text container to the right */
+.about-div {
+    width: 40%; /* Image takes up 60% of the container width */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the area without stretching the image */
 }
 
 /* text container */
 .about-inversed-container .about-text {
-    width: 40%; /* Text takes up the remaining 40% of the container width */
+    width: 60%; /* Text takes up the remaining 40% of the container width */
     padding-right: 20px; /* Add some space between the text and the image */
+    background-color: white;
 }
 
 /* title */
