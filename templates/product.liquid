@@ -1,16 +1,6 @@
-{% layout 'theme' %}
+<div class="product-display-container">
 
-{% if product %}
- <div class="product-page">
-    <h1>{{ product.title }}</h1>
-    <img src="{{ product.featured_image | img_url: '800x800' }}" alt="{{ product.title }}">
-    <p>{{ product.description }}</p>
-    <p>Price: {{ product.price | money }}</p>
-    <form action="/cart/add" method="post">
-      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-      <input type="submit" value="Add to Cart">
-    </form>
- </div>
-{% else %}
- <p>Sorry, the product could not be found.</p>
-{% endif %}
+<!-- product display section -->
+{% section 'product-display' %}
+
+</div>

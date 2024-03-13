@@ -21,6 +21,6 @@
     }
 {% endschema %}
 
-<h1 class="h1"> {{ section.settings.home-title }} </h1>
+<h1 class="h1"> {{ 'sections.home-title.home-title' | t }} </h1> <!-- Static content : hardcoded in translations because won't change much for example -->
 
-<h4> {{ section.settings.home-undertitle }} </h4>
+<h4> {{ section.settings.home-undertitle }} </h4> <!-- dynamic content : is changeable in the bakc office of shopify because will change often for example -->

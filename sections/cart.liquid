@@ -1,0 +1,31 @@
+{% schema %}
+    {
+     "name": "Cart",
+     "settings": []
+    }
+{% endschema %}
+
+<link rel="stylesheet" href="{{ 'cart.css' | asset_url }}">
+    
+{% if cart.item_count == 1 %}
+    <div class="cart-summary">
+        <h2>Your Cart</h2>
+        <p>1 item in cart</p>
+        <p>Total: {{ cart.total_price | money }}</p>
+        <a href="/cart" class="view-cart-button">View Cart</a>
+        <button id="empty-cart-button" class="empty-cart-button">Empty Cart</button>
+    </div>
+{% elsif cart.item_count >= 1 %}
+    <div class="cart-summary">
+        <h2>Your Cart</h2>
+        <p>{{ cart.item_count }} items in cart</p>
+        <p>Total: {{ cart.total_price | money }}</p>
+        <button id="empty-cart-button" class="empty-cart-button">Empty Cart</button>
+    </div>
+{% else %}
+     <div class="cart-empty">
+        <p>No items in cart - GO BUY SOME STUFF NOW!!</p>
+     </div>
+{% endif %}
+
+<script src="{{ 'cart.js' | asset_url }}"></script>

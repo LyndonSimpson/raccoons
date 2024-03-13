@@ -63,8 +63,8 @@
 
     <div class="footer-nav-menu">
       <ul>
-        {% for product in collection %}
-          <li href="{{ product.url }}"> {{ product.title }} </li>
+        {% for product in collections['Hydrogen'].products limit:3 %}
+          <a href="{{ product.url }}"> {{ product.title }} </a>
         {% endfor %}
       </ul>
       <a href="#privacy-page">Privacy policy</a>

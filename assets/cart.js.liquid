@@ -1,0 +1,26 @@
+document.addEventListener('DOMContentLoaded', function() {
+ var emptyCartButton = document.getElementById('empty-cart-button');
+
+ if (emptyCartButton) {
+    emptyCartButton.addEventListener('click', function() {
+      fetch('/cart/clear.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      })
+      .then(function(response) {
+        if (response.ok) {
+          //reload cart UI here if wanted
+          location.reload();
+        } else {
+          console.error('Failed to clear the cart');
+        }
+      })
+      .catch(function(error) {
+        console.error('Error:', error);
+      });
+    });
+ }
+});
