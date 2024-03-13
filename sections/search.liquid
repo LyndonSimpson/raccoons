@@ -1,0 +1,19 @@
+{% schema %}
+{
+    "name": "search",
+    "settings": [
+        
+        ]
+}
+{% endschema %}
+
+<h1>Search for a product :</h1>
+
+<form action="{{ routes.search_url }}">
+  <input type="text"
+    placeholder="Search"
+    name="q"
+    value="{{ search.terms | escape }}"
+ >
+  <input type="submit" value="Search">
+</form>
