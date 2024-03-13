@@ -1,10 +1,10 @@
-<h2>{{ collections['test_collection'].title }}</h2>
+<!-- Collection page -->
 
-{% for product in collections['test_collection'].products %}
-    <div>
-        <img src="{{ product.featured_image }}">
-        <h3>{{ product.title }}</h3>
-            <p>{{product.price}} </p>
-    {{- product.title | link_to: product.url }}
-    </div>
-{% endfor %}
+<link rel="stylesheet" href="{{ 'collection.css' | asset_url }}">
+
+<div class="main-container">
+
+    <!-- section product -->
+    {% section 'collection' %}
+
+</div>

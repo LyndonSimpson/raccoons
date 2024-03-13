@@ -33,9 +33,9 @@
     </div>
     <div class="dropdown-menu" id="dropdown-menu">
         <ul>
-          <li>montre 1</li>
-          <li>montre 2</li>
-          <li>montre 3</li>
+          {% for collection in collections %}
+            <a href="{{ collection.url }}"> {{ collection.title }} </a>
+          {% endfor %}
         </ul>
     </div>
     </div>

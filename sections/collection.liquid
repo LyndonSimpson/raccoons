@@ -1,0 +1,21 @@
+{% schema %}
+{
+    "name": "collection",
+    "settings": [
+
+        ]
+}
+{% endschema %}
+
+<h2>{{ collection.title }}</h2>
+
+{% for product in collection.products %}
+    <div>
+        <img src="{{ product.featured_image | img_url: '150x150' }}" alt="{{ product.title }}">
+        <h3> {{ product.title }} </h3>
+        <p> {{ product.price |  money }} </p>
+        <a href="{{ product.url }}"> {{ product.title }} </a>
+    </div>
+{% endfor %}
+
+<div> {{ collection.all_products_count }} </div>
