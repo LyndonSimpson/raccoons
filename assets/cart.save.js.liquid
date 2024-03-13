@@ -25,31 +25,48 @@ document.addEventListener('DOMContentLoaded', function() {
  }
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const updateButtons = document.querySelectorAll('.update-cart-button'); // Change this to your button's class or ID
+    updateButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const itemId = this.getAttribute('data-item-id'); // Adjust if necessary
+            updateCartItem(itemId);
+        });
+    });
+});
+
 function updateCartItem(itemId) {
     // Get the selected quantity
     var quantity = parseInt(document.getElementById('quantity-' + itemId).value);
-    // Construct the updates object
-    let updates = {};
-    updates[itemId] = quantity;
-    
+
+    // Construct the FormData object
+    var formData = new FormData();
+    formData.append("updates[" + itemId + "]", quantity);
+
     // Send a POST request to update the cart item
-    fetch('/cart/update.js', {
+    fetch(window.Shopify.routes.root + 'cart/update.js', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: JSON.stringify({ updates })
+        body: formData // We're sending FormData now, not JSON
     })
-    .then(function(response) {
+    .then(response => {
+        if (!response.ok) {
+            throw response; // If response is not ok, throw it to be caught below
+        }
         return response.json(); // Convert the response to JSON
     })
-    .then(function(data) {
+    .then(data => {
         console.log('Success:', data);
         // Optionally, reload the page to reflect the changes
         location.reload();
     })
-    .catch(function(error) {
-        console.error('Error:', error);
+    .catch(error => {
+        // Improved error handling: parse JSON only if the response is JSON type
+        if (error.json) {
+            error.json().then(errorJson => {
+                console.error('Error JSON:', errorJson);
+            });
+        } else {
+            console.error('Error:', error);
+        }
     });
 }

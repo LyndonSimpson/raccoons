@@ -6,7 +6,22 @@
 {% endschema %}
 
 <link rel="stylesheet" href="{{ 'cart.css' | asset_url }}">
-    
+
+{% for item in cart.items %}
+    <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.price | money }}</p>
+        <!-- Create a select input for the quantity -->
+        <select id="quantity-{{ item.variant_id }}" class="quantity-select">
+            {% for i in (1..10) %}
+                <option value="{{ i }}" {% if item.quantity == i %}selected{% endif %}>{{ i }}</option>
+            {% endfor %}
+        </select>
+        <!-- Button to update the cart -->
+        <button onclick="updateCartItem({{ item.variant_id }})">Update Cart</button>
+    </div>
+{% endfor %}
+
 {% if cart.item_count == 1 %}
     <div class="cart-summary">
         <h2>Your Cart</h2>
