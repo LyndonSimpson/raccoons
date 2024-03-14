@@ -1,0 +1,58 @@
+{% schema %}
+{
+    "name": "login",
+    "settings": [
+        {
+            "type": "text",
+            "id": "login-title",
+            "label": "Login title",
+            "default": "Login into your account (administrable)"
+        },
+        {
+            "type": "text",
+            "id": "forgot-pass",
+            "label": "Forgot pass title",
+            "default": "Did you forget your password again?... (administrable)"
+        }
+        ]
+}
+{% endschema %}
+
+<h1> {{ section.settings.login-title }} </h1>
+
+<!-- basic 'login' form -->
+{% form 'customer_login' %}
+    {{ form.errors | default_errors }}
+  
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" name="customer[email]">
+    </div>
+  
+    <div class="password">
+      <label for="password">Password</label>
+      <input type="password" name="customer[password]">
+    </div>
+  
+    <div class="submit">
+      <input type="submit" value="Sign in">
+    </div>
+{% endform %}
+
+{% comment  %} basic 'forgot password ?' form {% endcomment %}
+
+<h5> {{ section.settings.forgot-pass }} </h5>
+
+{% form 'recover_customer_password' %}
+    {{ form.errors | default_errors }}
+  
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" name="email">
+    </div>
+  
+    <div class="submit">
+      <input type="submit" value="Submit">
+    </div>
+{% endform %}
+  

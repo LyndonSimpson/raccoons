@@ -9,6 +9,7 @@
 
 <h1>Search for a product :</h1>
 
+<!-- search form -->
 <form action="{{ routes.search_url }}">
   <input type="text"
     placeholder="Search"
@@ -17,3 +18,9 @@
  >
   <input type="submit" value="Search">
 </form>
+
+<!-- search results -->
+{% for item in search.results %}
+  <h2> {{ item.title | link_to: item.url }} </h2>
+  <p> {{ item.content | highlight: search.terms }} </p>
+{% endfor %}

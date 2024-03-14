@@ -1,0 +1,31 @@
+{% schema %}
+{
+    "name": "activate-account",
+    "settings": [
+        
+        ]
+}
+{% endschema %}
+
+<h1>Create an account only if you are a raccoon</h1>
+
+{% form 'activate_customer_password' %}
+    {{ form.errors | default_errors }}
+  
+    <div class="password">
+      <label for="password">Password</label>
+      <input type="password" name="customer[password]">
+    </div>
+  
+    <div class="password_confirm">
+      <label for="password_confirmation">Password Confirmation</label>
+      <input type="password" name="customer[password_confirmation]">
+    </div>
+  
+    <div class="submit">
+      <input type="submit" value="Activate account">
+      <span>or</span>
+      <input type="submit" name="decline" value="Decline invitation">
+    </div>
+{% endform %}
+  
