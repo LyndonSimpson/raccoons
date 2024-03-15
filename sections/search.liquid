@@ -7,11 +7,12 @@
 }
 {% endschema %}
 
-<h1>Search for a product :</h1>
+<h2>Search for a product :</h2>
 
 <!-- search form -->
 <form action="{{ routes.search_url }}">
-  <input type="text"
+  <input
+    type="text"
     placeholder="Search"
     name="q"
     value="{{ search.terms | escape }}"
@@ -20,11 +21,29 @@
 </form>
 
 <!-- search results -->
-{% for item in search.results %}
-  {% if item = 0 %}
-    <h2>No items found in your search</h2>
-  {% else %}
-    <h2> {{ item.title | link_to: item.url }} </h2>
-    <p> {{ item.content | highlight: search.terms }} </p>
-  {% endif %}
-{% endfor %}
+{% if search.results_count == 0 %}
+  <h4>
+    No items found searching with "{{ search.terms }}", but here's a lil trash panda to comfort you
+  </h4>
+
+  <img src="{{ 'trash-panda.png' |  asset_img_url }}" alt="No items found img">
+{% else %}
+  <h4>
+    Number of items found searching with "{{ search.terms }}"" : {{ search.results_count }} items found.
+  </h4>
+
+  {% for item in search.results %}
+    <h2> 
+      {{ item.title | link_to: item.url }} 
+    </h2>
+
+    <img
+      src="{{ item.featured_img }}"
+      alt=""
+    >
+
+    <p> 
+      {{ item.content | highlight: search.terms }} 
+    </p>
+  {% endfor %}
+{% endif %}
