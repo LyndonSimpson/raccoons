@@ -1,0 +1,48 @@
+{
+    "sections": {
+        "home-title": {
+            "type": "home-title",
+            "settings": {
+
+            }
+        },
+        "about": {
+            "type": "about",
+            "settings": {
+
+            }
+        },
+        "about2": {
+            "type": "about2",
+            "settings": {
+
+            }
+        },
+        "explore": {
+            "type": "explore",
+            "settings": {
+
+            }
+        },
+        "carousel": {
+            "type": "carousel",
+            "settings": {
+
+            }
+        },
+        "contact": {
+            "type": "contact",
+            "settings": {
+
+            }
+        }
+    },
+    "order": [
+        "home-title",
+        "about",
+        "about2",
+        "explore",
+        "carousel",
+        "contact"
+    ]
+}

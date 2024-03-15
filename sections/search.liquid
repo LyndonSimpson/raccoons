@@ -21,6 +21,10 @@
 
 <!-- search results -->
 {% for item in search.results %}
-  <h2> {{ item.title | link_to: item.url }} </h2>
-  <p> {{ item.content | highlight: search.terms }} </p>
+  {% if item = 0 %}
+    <h2>No items found in your search</h2>
+  {% else %}
+    <h2> {{ item.title | link_to: item.url }} </h2>
+    <p> {{ item.content | highlight: search.terms }} </p>
+  {% endif %}
 {% endfor %}
